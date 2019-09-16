@@ -30,12 +30,14 @@
 	</form>
 	
 	<%
+		int count = list.size();
+		int index = 0;
 		for(GuestbookVo guestVo : list) {
 	%>
 	<br>
 		<table width=510 border=1>
 			<tr>
-				<td><%= guestVo.getNo() %></td>
+				<td><%= count-index++ %></td>
 				<td><%= guestVo.getName() %></td>
 				<td><%= guestVo.getRegDate() %></td>
 				<td><a href="deleteform.jsp?no=<%= guestVo.getNo() %>">삭제</a></td>
