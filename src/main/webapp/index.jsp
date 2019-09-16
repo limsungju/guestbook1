@@ -41,7 +41,7 @@
 				<td><a href="deleteform.jsp?no=<%= guestVo.getNo() %>">삭제</a></td>
 			</tr>
 			<tr>
-				<td colspan=4><%= guestVo.getContents()%></td>
+				<td colspan=4><%= guestVo.getContents().replaceAll("\n", "<br>") %></td>
 			</tr>
 		</table>
 	<%
