@@ -28,22 +28,22 @@
 		</tr>
 	</table>
 	</form>
-	<br>
+	
 	<%
 		for(GuestbookVo guestVo : list) {
 	%>
-	
-	<table width=510 border=1>
-		<tr>
-			<td><%= guestVo.getNo() %></td>
-			<td><%= guestVo.getName() %></td>
-			<td><%= guestVo.getRegDate() %></td>
-			<td><a href="deleteform.jsp?no=<%= guestVo.getNo() %>">삭제</a></td>
-		</tr>
-		<tr>
-			<td colspan=4><%= guestVo.getContents()%></td>
-		</tr>
-	</table>
+	<br>
+		<table width=510 border=1>
+			<tr>
+				<td><%= guestVo.getNo() %></td>
+				<td><%= guestVo.getName() %></td>
+				<td><%= guestVo.getRegDate() %></td>
+				<td><a href="deleteform.jsp?no=<%= guestVo.getNo() %>">삭제</a></td>
+			</tr>
+			<tr>
+				<td colspan=4><%= guestVo.getContents()%></td>
+			</tr>
+		</table>
 	<%
 		}
 	%>
